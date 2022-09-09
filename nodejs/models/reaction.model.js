@@ -4,7 +4,7 @@ const reactionSchema = mongoose.Schema({
     //     type: String,
     //     require: true
     // },
-    reactionid:{
+    postid:{
         type:String
     },
     commentid:{

@@ -1,7 +1,6 @@
 require('../db/db')
 const res = require('express/lib/response');
 const Post= require('../models/post.model');
-const { post } = require('../routes/post.route');
 const addPostService = (text) => {
     console.log("called");
     const post=new Post({
