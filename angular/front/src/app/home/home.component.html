@@ -1,0 +1,36 @@
+<div class="card container d-flex align-items-center justify-content-center" style="width:800px;text">
+   
+    <div class="col-xs-3 col-sm-auto">
+      <input placeholder="Search" class="search position-absolute top-0 end-0" type="text" >
+    </div>
+
+    <div class="card-body">
+
+<div class="table-responsive">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td><i class="fa fa-brands fa-instagram fa-3x pink"></i></td>
+        <td class="container"> 
+            <app-readmore [content]="post.post_text"
+            [limit]="100"
+            [completeWords]="true"></app-readmore>
+        </td>
+        <td>{{post.post_comments.length}} Comments</td>
+        <td>{{post.post_date }} </td>
+        <td><i class="fa fa-light fa-thumbs-down fa-3x  white"></i></td>
+      </tr>
+  </tbody>
+  </table>
+  </div>
+</div>
+</div>
